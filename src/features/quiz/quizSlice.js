@@ -99,6 +99,7 @@ const quizSlice = createSlice({
             const section = state.questionItems.find(item => {
                 if (item.question === question)
                     return item;
+                return false;
             })
             //change isSelect prop on answers array of obj 
             const answers = section.answers.map(item => {
@@ -125,7 +126,7 @@ const quizSlice = createSlice({
                 const answerSelect = item.answers.find(answer => {
                     if (answer.isSelect)
                         return answer;
-                    
+                    return false;
                 })
                 if (typeof answerSelect !== 'undefined' && item.correct_answer === answerSelect.answer) {
                     
