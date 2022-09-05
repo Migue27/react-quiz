@@ -13,7 +13,7 @@ function Start(){
 
   const changeRoute = () =>{
     navigate('./Quiz');
-    dispatch(getQuizItems());
+
   }
   
   return (

@@ -12,9 +12,9 @@ function Quiz() {
     const classes = useStyles();
     const navigate = useNavigate();
     
-    // useEffect(() => {
-    //     dispatch(getQuizItems())
-    // }, [])
+    useEffect(() => {
+        dispatch(getQuizItems())
+    }, [window.onload])
     
     const {questionItems, isLoading, points, isFinish} = useSelector(state => state.quiz);
     

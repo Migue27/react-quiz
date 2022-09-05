@@ -17,27 +17,20 @@ function Question({ question, answers, isCorrect, correct_answer }) {
         if (!isFinish) {
             if (item.isSelect)
                 return "primary";
-            if (!item.isSelect)
-                return "secondary";
+
+            return "secondary";
         }
-        if(isFinish) {
-            if(item.answer === correct_answer) {
+        if (isFinish) {
+            if (item.answer === correct_answer) {
                 return "success"
             }
-            if(item.isSelect && !isCorrect) {
-                // if (isCorrect) {
-                //     return "success";
-                // }
-                // if (!isCorrect){
-                    return "error";
-                // } 
+            if (item.isSelect && !isCorrect) {
+                return "error";
             }
-            else{
+            else {
                 return "secondary";
             }
         }
-
-        
         else return;
     }
 
@@ -50,7 +43,7 @@ function Question({ question, answers, isCorrect, correct_answer }) {
                 onClick={() => dispatch(selectAnswer({ answerId: item.key, question: question }))}
                 color={renderColor(item)}
                 // variant="outlined"
-                variant={ isFinish ? "contained" : "outlined"}                
+                variant={isFinish ? "contained" : "outlined"}
             >
                 {item.answer}
             </Button>

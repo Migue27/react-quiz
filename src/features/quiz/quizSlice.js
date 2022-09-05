@@ -38,6 +38,7 @@ export const getQuizItems = createAsyncThunk('quiz/getQuizItems',
     })
 
 const quizSlice = createSlice({
+    
     name: 'quiz',
     initialState: initialState,
     extraReducers: {
