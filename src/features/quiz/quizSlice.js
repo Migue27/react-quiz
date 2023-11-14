@@ -20,7 +20,6 @@ const initialState = {
     isLoading: true,
     isFinish: false,
     points: 0,
-<<<<<<< HEAD
     categories:[{
         key: "",
         name:"",
@@ -50,18 +49,6 @@ export const getQuizItems = createAsyncThunk('quiz/getQuizItems',
             //const finalPayload = resp.data;   
             //thunkAPI.dispatch(shuffleAnswer())
             //return finalPayload;
-=======
-}
-const url = 'https://opentdb.com/api.php?amount=10';
-
-export const getQuizItems = createAsyncThunk('quiz/getQuizItems',
-    async (name, thunkAPI) => {
-        try {
-            const resp = await axios(url);
-            //const finalPayload = resp.data;   
-            //thunkAPI.dispatch(shuffleAnswer())
-            //retunr finalPayload;
->>>>>>> main
             return resp.data;
         } catch (error) {
             return thunkAPI.rejectWithValue('something went wrong :(');
@@ -69,7 +56,6 @@ export const getQuizItems = createAsyncThunk('quiz/getQuizItems',
 
     })
 
-<<<<<<< HEAD
 export const getCategories = createAsyncThunk('quiz/getCategories',
     async (name,thunkAPI) => {
         try {
@@ -81,14 +67,11 @@ export const getCategories = createAsyncThunk('quiz/getCategories',
         
     })
 
-=======
->>>>>>> main
 const quizSlice = createSlice({
     
     name: 'quiz',
     initialState: initialState,
     extraReducers: {
-<<<<<<< HEAD
         [getCategories.pending]: (state) =>{
             state.categoriesIsLoading = true;
         },
@@ -108,8 +91,6 @@ const quizSlice = createSlice({
         [getCategories.rejected]: (state) => {
             state.categoriesIsLoading = false;
         },
-=======
->>>>>>> main
         [getQuizItems.pending]: (state) => {
             state.isLoading = true;
         },
@@ -184,11 +165,7 @@ const quizSlice = createSlice({
         },
         check: (state, action) => {
             if(state.isFinish)
-<<<<<<< HEAD
             return state;
-=======
-            return;
->>>>>>> main
             //toggle to block questions and check button
             state.isFinish = true;
             let { questions, points } = action.payload;
@@ -210,18 +187,13 @@ const quizSlice = createSlice({
                     }
                 }
                 return item;
-<<<<<<< HEAD
             })             
             
-=======
-            })
->>>>>>> main
             state.points = points;
             state.questionItems = questions;
         },
         start: (state, action) =>{
             <Redirect to="/"></Redirect>
-<<<<<<< HEAD
         },
         startGame: (state, action) =>{
             state.category = action.payload;
@@ -231,8 +203,6 @@ const quizSlice = createSlice({
             return state;
             // console.log(state.category);
             
-=======
->>>>>>> main
         }
     }
 
@@ -275,10 +245,6 @@ const shuffleAnswers = (array) => {
 
 // console.log(quizSlice);
 
-<<<<<<< HEAD
 export const { selectAnswer, check, start, startGame } = quizSlice.actions;
-=======
-export const { selectAnswer, check, start } = quizSlice.actions;
->>>>>>> main
 
 export default quizSlice.reducer;
