@@ -14,7 +14,11 @@ function Quiz() {
     
     useEffect(() => {
         dispatch(getQuizItems())
+<<<<<<< HEAD
     }, [])
+=======
+    }, [window.onload])
+>>>>>>> main
     
     const {questionItems, isLoading, points, isFinish} = useSelector(state => state.quiz);
     
