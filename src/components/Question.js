@@ -15,8 +15,8 @@ function Question({ question, answers, isCorrect, correct_answer }) {
     const renderColor = (item) => {
 
         if (!isFinish) {
-            if (item.isSelect)
-                return "primary";
+            // if (item.isSelect)
+            //     return "primary";
 
             return "secondary";
         }
@@ -43,7 +43,8 @@ function Question({ question, answers, isCorrect, correct_answer }) {
                 onClick={() => dispatch(selectAnswer({ answerId: item.key, question: question }))}
                 color={renderColor(item)}
                 // variant="outlined"
-                variant={isFinish ? "contained" : "outlined"}
+                variant={item.isSelect ? "contained" : isFinish && (item.answer === correct_answer || (item.isSelect && !isCorrect)) ? "contained" : "outlined"}
+                style={isFinish ? {cursor: "default" } : {}}
             >
                 {item.answer}
             </Button>
@@ -59,6 +60,12 @@ function Question({ question, answers, isCorrect, correct_answer }) {
     );
 }
 const useStyles = makeStyles(theme => ({
+    answer:{
+        // width: "50%",
+        // minWidth: "350px",
+        // margin:"0 auto",
+
+    }
 }));
 
 
