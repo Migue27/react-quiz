@@ -42,12 +42,12 @@ function Quiz() {
                 })}
                 {!isFinish?
 
-                <div className={`${classes.center} ${classes.button}`}>
+                <div className={`${classes.center} ${classes.button} ${classes.MarginBottom}`}>
                     
                 <Button
                 variant="contained"
                 size= "large"
-                
+                color= "secondary"
                 onClick={()=> dispatch(check({questions: questionItems, points: points}))}
                 >
                     Check
@@ -59,9 +59,10 @@ function Quiz() {
                 <div className={classes.center}>
                      <h3> You obtain: {points} / {questionItems.length} points</h3>
                 </div>
-                <div className={`${classes.center} ${classes.button}`}>
+                <div className={`${classes.center} ${classes.button} ${classes.MarginBottom}`}>
                 <Button
                 variant="contained"
+                color= "secondary"
                 size= "large"
                 onClick = {changeRoute}
                 >
@@ -81,13 +82,11 @@ const useStyles = makeStyles(theme => ({
     container: {
         display: "flex",
         flexDirection: "column",
-        // justifyContent: "center",
-        //alignItems: "center",
         marginTop: "15px",
         backgroundColor: "rgba(255,255,255, 0.8)",
-        padding: "1% 15% 2% 15%",
         borderRadius: "10px",
         margin: "0 auto",
+        maxWidth:"90vw",
 
     },
     center: {
@@ -97,7 +96,11 @@ const useStyles = makeStyles(theme => ({
     },
     button: {
         marginTop:"20px"
+    },
+    MarginBottom: {
+        marginBottom:"40px",
     }
+
 }));
 export default Quiz;
 

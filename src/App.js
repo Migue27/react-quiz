@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Start from './pages/Start';
 import Quiz from './pages/Quiz';
 import { makeStyles } from '@mui/styles';
-import background from './images/background.jpg';
+import background from './images/background-2.jpg';
 
 
 function App() {
@@ -28,6 +28,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    maxWidth: "100vw",
     // height: "100vh",
     backgroundImage: `url(${background})`,
     backgroundPosition: 'center',

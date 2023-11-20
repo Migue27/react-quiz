@@ -28,9 +28,9 @@ function Start(){
       setCategory(e.target.value);    
     };
 
-    useEffect(()=>{
-      console.log({category})
-    },[category])
+    // useEffect(()=>{
+    //   console.log({category})
+    // },[category])
 
 
   // const startGame = () =>{
@@ -56,18 +56,17 @@ function Start(){
     return (
       <div className={classes.root}>
       <div className={classes.container}>
-        <h1 className={classes.title}>Quizz!</h1>
+        <h1 className={classes.title}>Quiz!</h1>
           <h2>Loading...</h2>
         </div>
       </div>
     );
   }
-  console.log(categories)
   return (
     
     <div className={classes.root}>
       <div className={classes.container}>
-        <h1 className={classes.title}>Quizz!</h1>
+        <h1 className={classes.title}>Quiz!</h1>
         
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Category</InputLabel>

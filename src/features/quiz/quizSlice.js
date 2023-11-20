@@ -58,6 +58,10 @@ export const getQuizItems = createAsyncThunk('quiz/getQuizItems',
 
 export const getCategories = createAsyncThunk('quiz/getCategories',
     async (name,thunkAPI) => {
+        // if(thunkAPI.getState().quiz.categories[0].name === "All Categories")
+        // {
+        //     return;
+        // }
         try {
             const resp = await axios(urlCategories);
             return resp.data;
@@ -193,11 +197,11 @@ const quizSlice = createSlice({
             state.questionItems = questions;
         },
         start: (state, action) =>{
+            // console.log({state});
             <Redirect to="/"></Redirect>
         },
         startGame: (state, action) =>{
             state.category = action.payload;
-            console.log( state.category)
             // if(state.category)
                 // <Redirect to="/Quiz"></Redirect>
             return state;
