@@ -69,9 +69,13 @@ function Start(){
         <h1 className={classes.title}>Quiz!</h1>
         
         <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Category</InputLabel>
+          <InputLabel 
+          id="demo-simple-select-label"
+          color= "secondary"
+          >Category</InputLabel>
           <Select
             labelId="demo-simple-select-label"
+            color= "secondary"
             id="demo-simple-select"
             value={category}
             label="Category"
@@ -91,7 +95,9 @@ function Start(){
         </FormControl>
         <div className={classes.button}>
          
-          <Button variant="contained"
+          <Button 
+          variant="contained"
+          color= "secondary"
           onClick={handleStartGame} 
           // onClick={changeRoute}
             >

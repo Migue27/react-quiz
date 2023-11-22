@@ -104,7 +104,7 @@ const theme = createTheme({
             contrastText:'#fff',
         },
         disabled: {
-            main: '#9f9f9f'
+            main: '#9f9f9f',
         },
         // secondary: {
         //     main: '#BB36D3'
