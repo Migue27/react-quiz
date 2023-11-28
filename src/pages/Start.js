@@ -72,7 +72,9 @@ function Start(){
           <InputLabel 
           id="demo-simple-select-label"
           color= "secondary"
-          >Category</InputLabel>
+          >
+            Category
+          </InputLabel>
           <Select
             labelId="demo-simple-select-label"
             color= "secondary"
