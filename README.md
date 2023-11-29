@@ -1,10 +1,12 @@
 # Quiz
 #### Video Demo: https://youtu.be/BrzCQwYRvpU
-#### Description: The project is an App made it with React. I used Redux to centralize states and actions in the appropriate slice. Also was used Axios to fetch the API and Redux thunk to work with the async requests. The response JSON is processed and used to create questionItems object. I used he.decode library to decode HTML special characters. Also I used uniqid to give unique key to each answer and so, make it possible to identify in the corresponding component the events performed (like checking or unchecking buttons...).
+#### Description: 
+
+##### The project is an App made it with React. I used Redux to centralize states and actions in the appropriate slice. Also was used Axios to fetch the API and Redux thunk to work with the async requests. The response JSON is processed and used to create questionItems object. I used he.decode library to decode HTML special characters. Also I used uniqid to give unique key to each answer and so, make it possible to identify in the corresponding component the events performed (like checking or unchecking buttons...).
 
 ##### The project has two pages. The first to select the category of the quiz. And the second to implement the quiz itself. At component level I divided in two components. The first <Question>, which contains the second, <Answer>.
 
-# React doc:
+<!-- # React doc:
 
 ## Getting Started with Create React App
 
@@ -75,4 +77,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
